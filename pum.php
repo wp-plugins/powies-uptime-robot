@@ -62,7 +62,8 @@ function pum_shortcode( $atts ) {
 				  <td>'.$monitor->alltimeuptimeratio.' %</td></tr>';
 	}
 	$sc.='</table>';
-	$sc.=__('Updated at', 'pum'). ' '.date(get_option('time_format'),get_option( 'pum-time' ));
+	$sc.=__('Updated at', 'pum'). ' '.get_date_from_gmt( date('Y-m-d H:i:s' ,get_option( 'pum-time' )), get_option('time_format'));
+	//$sc.=__('Updated at', 'pum'). ' '.date_i18n(get_option('time_format'), get_option( 'pum-time' ));
 	return $sc;
 }
 
