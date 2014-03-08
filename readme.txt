@@ -13,6 +13,8 @@ Uptime Robot (www.uptimerobot.com) Shortcode and Widget Plugin
 A Plugin to Uptime Robot Server Monitoring. Add a status List to a post or page using the shortcode PUM 
 or simple add a widget to your sidebar.
 
+If you make a donation to this plugin we will put it directly to the UptimeRobot project.
+
 = Documentation =
 Add your API code from uptimerobot.com > My Settings > Main API Key to Settings > Uptime Robot Setup > API Key
 
