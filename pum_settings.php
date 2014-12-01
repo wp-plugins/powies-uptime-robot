@@ -22,6 +22,19 @@ if  ( get_option('postfield-legend') == '' ) {
     </div>
 </div>
 
+<div id="poststuff">
+<div class="postbox">
+<h3><?php _e('Display Settings', 'pum') ?></h3>
+	<div class="inside">
+    <table class="form-table">
+        <tr valign="top">
+        	<th scope="row"><?php _e('Hide Monitors', 'pum') ?></th>
+        	<td><input type="text" size="80" name="pum-hidemonitors" value="<?php echo get_option('pum-hidemonitors'); ?>" /></td>
+        </tr>
+    </table>
+    <?php _e('Comma separated list of monitors to hide from displaying', 'pum') ?>
+    </div>
+</div>
 
 </div>
 <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />

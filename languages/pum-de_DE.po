@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plinks\n"
-"POT-Creation-Date: 2014-03-04 14:40+0100\n"
-"PO-Revision-Date: 2014-03-04 14:43+0100\n"
+"POT-Creation-Date: 2014-12-01 11:42+0100\n"
+"PO-Revision-Date: 2014-12-01 11:44+0100\n"
 "Last-Translator: Powie <te@powie.de>\n"
 "Language-Team: powie.de <te@powie.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -18,47 +18,43 @@ msgstr ""
 msgid "Uptime Robot Setup"
 msgstr "Uptime Robot Setup"
 
-#: ../pum.php:55
+#: ../pum.php:56
 msgid "Status"
 msgstr "Status"
 
-#: ../pum.php:56
+#: ../pum.php:57
 msgid "Monitor Name"
 msgstr "Monitor Name"
 
-#: ../pum.php:57
+#: ../pum.php:58
 msgid "Uptime"
 msgstr "Zeit Online"
 
-#: ../pum.php:65
+#: ../pum.php:68
 msgid "Updated at"
 msgstr "Aktualisiert"
 
-#: ../pum.php:73
-msgid "Thanks for your post. We will review your post befor publication."
-msgstr ""
-
-#: ../pum.php:84
+#: ../pum.php:88
 msgid "paused"
 msgstr "pausiert"
 
-#: ../pum.php:87
+#: ../pum.php:91
 msgid "not checked yet"
 msgstr "Unbekannt"
 
-#: ../pum.php:90
+#: ../pum.php:94
 msgid "up"
 msgstr "Online"
 
-#: ../pum.php:93
+#: ../pum.php:97
 msgid "seems down"
 msgstr "Offline?"
 
-#: ../pum.php:96
+#: ../pum.php:100
 msgid "down"
 msgstr "Offline"
 
-#: ../pum.php:99
+#: ../pum.php:103
 msgid "unknown"
 msgstr "Unbekannt"
 
@@ -79,14 +75,28 @@ msgid "API Key"
 msgstr "API Key"
 
 #: ../pum_settings.php:27
+msgid "Display Settings"
+msgstr "Anzeige Einstellungen"
+
+#: ../pum_settings.php:31
+msgid "Hide Monitors"
+msgstr "Verstecke Monitore"
+
+#: ../pum_settings.php:35
+msgid "Comma separated list of monitors to hide from displaying"
+msgstr ""
+"Komma separierte Liste mit Monitoren die nicht angezeigt werden. Bsp: "
+"<code>mon1,mon2,mon3</code>"
+
+#: ../pum_settings.php:40
 msgid "Save Changes"
 msgstr "Speichern"
 
-#: ../pum_settings.php:33
+#: ../pum_settings.php:46
 msgid "Shortcode Usage"
 msgstr "Shortcode Benutzung"
 
-#: ../pum_settings.php:35
+#: ../pum_settings.php:48
 msgid ""
 "Use the shortcode <code>[pum]</code> to show the status list on a page or "
 "post."
@@ -94,7 +104,7 @@ msgstr ""
 "Benutze den Shortcode <code>[pum]</code> um die Status Liste auf einer Seite "
 "einzufügen."
 
-#: ../pum_settings.php:40
+#: ../pum_settings.php:53
 msgid "About"
 msgstr "Über"
 
@@ -158,9 +168,6 @@ msgstr "Über"
 
 #~ msgid "pLinks Setup"
 #~ msgstr "pLinks Setup"
-
-#~ msgid "Thumbnail Settings"
-#~ msgstr "Thumbnail Einstellungen"
 
 #~ msgid "Show Preview Images"
 #~ msgstr "Thumbnail Vorschau anzeigen"

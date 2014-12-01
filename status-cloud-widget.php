@@ -18,7 +18,9 @@ class pum_Cloud_Widget extends WP_Widget {
 		if ( !empty( $title ) ) { echo $before_title . $title . $after_title; };
 		$json = pum_get_data();
 		foreach ($json->monitors->monitor as $monitor) {
-			echo '<span class="pum stat'.$monitor->status.'">'.$monitor->friendlyname.'</span> ';
+			if ( pum_hidestatus($monitor->friendlyname) ) {
+				echo '<span class="pum stat'.$monitor->status.'">'.$monitor->friendlyname.'</span> ';
+			}
 		}
 		echo $after_widget;
 		?>

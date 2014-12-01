@@ -3,8 +3,8 @@ Contributors: PowieT
 Donate link: http://www.powie.de
 Tags: Uptime Robot, Server Monitoring, Widget, Shortcode
 Requires at least: 2.5
-Tested up to: 4.0
-Stable tag: 0.9.0
+Tested up to: 4.0.1
+Stable tag: 0.9.1
 License: GPLv2
 
 Uptime Robot (www.uptimerobot.com) Shortcode and Widget Plugin
@@ -20,6 +20,8 @@ If you make a donation to this plugin we will put it directly to the UptimeRobot
 
 = Documentation =
 Add your API code from uptimerobot.com > My Settings > Main API Key to Settings > Uptime Robot Setup > API Key
+
+If you wish to hide a special monitor from beeing displayed, add it to the list under Settings. For more than one monitor make a comma separated list: mon1,mon2,mon3
 
 **Basic example:**
 [pum] inserts the shortcode on a page or post
@@ -38,6 +40,10 @@ Support Forum @ [powie.de](http://goo.gl/lfR7B)
 Use our forum at www.powie.de for support
 
 == Changelog ==
+
+= 0.9.1 (01.12.2014) =
+* comma separated list to hide monitors
+
 = 0.9.0 =
 * initial version
 
@@ -45,4 +51,5 @@ Use our forum at www.powie.de for support
 na
 
 == Screenshots ==
-na
+1. Shortcode output on a page
+2. Status Cloud Widget

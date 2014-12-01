@@ -3,7 +3,7 @@
 Plugin Name: Powies Uptime Robot
 Plugin URI: http://www.powie.de/wordpress/pum
 Description: Powies Uptime Robot Plugin with Shortcode and Widget
-Version: 0.9.0
+Version: 0.9.1
 License: GPLv2
 Author: Thomas Ehrhardt
 Author URI: http://www.powie.de
@@ -47,6 +47,7 @@ function pum_register_settings() {
 	register_setting( 'pum-settings', 'pum-apikey');			//API Key
 	register_setting( 'pum-settings', 'pum-cache' );			//Letzte abgefragte Daten
 	register_setting( 'pum-settings', 'pum-time' );			    //Timestamp abgefragte Daten
+	register_setting( 'pum-settings', 'pum-hidemonitors' );		//Liste zu versteckender Monitore
 }
 
 function pum_shortcode( $atts ) {
@@ -56,10 +57,12 @@ function pum_shortcode( $atts ) {
 			<th>'.__('Monitor Name', 'pum').'</th>
 			<th>'.__('Uptime', 'pum').'</th></tr>';
 	foreach ($json->monitors->monitor as $monitor) {
-		$sc.='<tr><td><span class="pum stat'.$monitor->status.'">
+		if ( pum_hidestatus($monitor->friendlyname) ) {
+			$sc.='<tr><td><span class="pum stat'.$monitor->status.'">
                       '.pum_status_type($monitor->status).'</span></td>
 				  <td>'.$monitor->friendlyname.'</td>
 				  <td>'.$monitor->alltimeuptimeratio.' %</td></tr>';
+		}
 	}
 	$sc.='</table>';
 	$sc.=__('Updated at', 'pum'). ' '.get_date_from_gmt( date('Y-m-d H:i:s' ,get_option( 'pum-time' )), get_option('time_format'));
@@ -69,9 +72,9 @@ function pum_shortcode( $atts ) {
 
 //Activate
 function pum_activate() {
-	// do not generate any output here
-	add_option('postfield-rows',5);
-	add_option('after-post-msg', __('Thanks for your post. We will review your post befor publication.','pag'));
+	//do not generate any output here
+	//add_option('postfield-rows',5);
+	//add_option('after-post-msg', __('Thanks for your post. We will review your post befor publication.','pag'));
 }
 
 //Deactivate
@@ -132,4 +135,12 @@ function pum_get_data() {
 	return $json;
 }
 
+function pum_hidestatus($name) {
+	$l = split(',', get_option('pum-hidemonitors') );
+	if ( in_array($name,$l) ) {
+		return false;
+	} else {
+		return true;
+	}
+}
 ?>
