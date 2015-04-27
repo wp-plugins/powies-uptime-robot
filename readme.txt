@@ -3,7 +3,7 @@ Contributors: PowieT
 Donate link: http://www.powie.de
 Tags: Uptime Robot, Server Monitoring, Widget, Shortcode
 Requires at least: 2.5
-Tested up to: 4.0.1
+Tested up to: 4.2
 Stable tag: 0.9.1
 License: GPLv2
 
